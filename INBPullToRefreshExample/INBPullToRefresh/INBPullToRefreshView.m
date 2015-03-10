@@ -126,7 +126,7 @@ typedef enum {
         
         int i=0;
         unsigned int mc = 0;
-        Method * mlist = class_copyMethodList(RefreshViewController.class, &mc);
+        Method * mlist = class_copyMethodList(self.class, &mc);
         BOOL isViewWillAppear = NO;
         BOOL isViewDidAppear = NO;
         BOOL isViewWillDisappear = NO;
