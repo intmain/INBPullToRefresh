@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RefreshViewController.h"
 
 #define TOP_BAR_HEIGHT 64
 
