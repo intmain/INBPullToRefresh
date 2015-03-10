@@ -4,9 +4,9 @@ Pod::Spec.new do |s|
   s.summary      = "A short description of INBPullToRefresh."
   s.homepage     = "https://github.com/intmain/INBPullToRefresh"
   s.license      = "MIT"
-  s.author             = { "intmain" => "intmain@hotmail.com" }
+  s.author       = { "intmain" => "intmain@hotmail.com" }
   s.platform     = :ios, "7.0"
-  s.source       = { :git => "http://github.com/intmain/INBPullToRefresh.git", :tag => s.version.to_s }
+  s.source       = { :git => "http://github.com/intmain/INBPullToRefresh.git", :tag => "v#{s.version}"}
   s.source_files  = "INBPullToRefresh"
   s.dependency "AFNetworking"
   s.requires_arc = true
