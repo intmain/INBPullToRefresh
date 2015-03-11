@@ -43,7 +43,8 @@
     
     self.images = @[ [UIImage imageNamed:@"sorea1.jpg"],[UIImage imageNamed:@"sorea2.jpg"],[UIImage imageNamed:@"sorea3.jpg"],[UIImage imageNamed:@"girlgen.jpg"],[UIImage imageNamed:@"girlgen2.jpg"] ];
     
-    self.imageURLs = @[[NSURL URLWithString:@"https://agit.daumkakao.com/assets/group_theme/group_header_default-0c0cad0cb5eb2be9d4dbd2e25eb36f35.png"] , [NSURL URLWithString:@"https://agit.daumkakao.com/assets/group_theme/group_header_default-0c0cad0cb5eb2be9d4dbd2e25eb36f35.png"] ];
+    self.imageURLs = @[[NSURL URLWithString:@"https://raw.githubusercontent.com/intmain/INBPullToRefresh/master/INBPullToRefreshExample/images/sorea1.jpg"] , [NSURL URLWithString:@"https://raw.githubusercontent.com/intmain/INBPullToRefresh/master/INBPullToRefreshExample/images/sorea2.jpg"],
+                       [NSURL URLWithString:@"https://raw.githubusercontent.com/intmain/INBPullToRefresh/master/INBPullToRefreshExample/images/sorea3.jpg"]];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -27,17 +27,11 @@ typedef enum {
 
 @implementation UINavigationBar (Addition)
 
-/**
- * Hide 1px hairline of the nav bar
- */
 - (void)hideBottomHairline {
     UIImageView *navBarHairlineImageView = [self findHairlineImageViewUnder:self];
     navBarHairlineImageView.hidden = YES;
 }
 
-/**
- * Show 1px hairline of the nav bar
- */
 - (void)showBottomHairline {
     // Show 1px hairline of translucent nav bar
     UIImageView *navBarHairlineImageView = [self findHairlineImageViewUnder:self];
@@ -86,8 +80,6 @@ typedef enum {
     view.showPullToRefresh = YES;
     view.refreshThreshold = 50.0f;
     view.pullToRefreshHandler = handler;
-    
-    
     
     UILabel *loadLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
     loadLabel.text = @"Refresh";
@@ -401,10 +393,10 @@ typedef enum {
 
 - (void)scrollViewScrolled:(CGPoint)contentOffset
 {
-
+    BOOL isScrollDown = contentOffset.y <= -self.maxImageHeight;
     
-    if( contentOffset.y <= -self.maxImageHeight) { // 아래로 내려간경우
-        CGFloat gap = -(contentOffset.y - (-self.maxImageHeight)); // 얼마나 내려갔나?
+    if( isScrollDown ) {
+        CGFloat gap = -(contentOffset.y - (-self.maxImageHeight));
         CGRect frame = self.frame ;
         frame.size.height = self.maxImageHeight + gap;
         frame.size.width = self.tableView.frame.size.width;
@@ -414,12 +406,8 @@ typedef enum {
         
         self.progress = gap / self.refreshThreshold;
         self.blurEffectView.alpha = 0.0f;
-        
-    } else { // 위로 올라간 경우
-        //위로 올라가면 좌표를 위로 올라간만큼 올려야 함.
-        // 근데 66은 남겨야함
-        
-        CGFloat gap = -(contentOffset.y - (-self.maxImageHeight)); // 얼마나 내려갔나?
+    } else {
+        CGFloat gap = -(contentOffset.y - (-self.maxImageHeight));
         self.progress = 0.0f;
         
         if(self.tableView.tableHeaderView) {
@@ -449,13 +437,13 @@ typedef enum {
     CGFloat yOffset = contentOffset.y;
     
     switch (self.state) {
-        case INBPullToRefreshViewStateNormal: //detect action
+        case INBPullToRefreshViewStateNormal:
             if (!self.tableView.dragging && !self.tableView.isZooming && yOffset < -(self.maxImageHeight+self.refreshThreshold)) {
                 [self actionTriggeredState];
             }
             break;
-        case INBPullToRefreshViewStateStopped: // finish
-        case INBPullToRefreshViewStateLoading: // wait until stopIndicatorAnimation
+        case INBPullToRefreshViewStateStopped:
+        case INBPullToRefreshViewStateLoading:
             break;
         default:
             break;
@@ -486,11 +474,9 @@ typedef enum {
                      animations:^{
                          self.tableView.contentInset = UIEdgeInsetsMake(self.maxImageHeight, 0, 0, 0);
                          if([self.blurEffectView.layer animationForKey:@"opacityIN"] != nil) {
-                             
                              [self.blurEffectView.layer removeAnimationForKey:@"opacityIN"];
                          }
                      } completion:^(BOOL finished) {
-                         
                          self.state = INBPullToRefreshViewStateNormal;
                      }];
 }
@@ -661,11 +647,7 @@ NSInteger OsVer()
 
 BOOL IsPad()
 {
-#ifdef __IPHONE_3_2
     return UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad;
-#else
-    return NO;
-#endif
 }
 
 @end

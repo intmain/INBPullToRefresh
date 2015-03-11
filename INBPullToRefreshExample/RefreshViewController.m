@@ -40,10 +40,8 @@
         }];
         
     }
-    UIImageView *indicatorView =  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"reload.png"]];
-    indicatorView.contentMode = UIViewContentModeScaleToFill;
-    indicatorView.frame = CGRectMake(0, 0, 25, 25);
-    refreshView.pullIndicatorView = indicatorView;
+
+    refreshView.pullIndicatorView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"reload.png"]];
     
 }
 
