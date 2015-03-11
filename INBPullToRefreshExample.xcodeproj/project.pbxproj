@@ -295,6 +295,7 @@
 				D76CC7FF1AAB58A000DB9ED5 /* Sources */,
 				D76CC8001AAB58A000DB9ED5 /* Frameworks */,
 				D76CC8011AAB58A000DB9ED5 /* Resources */,
+				D71B13B91AB06A3E0064C3D2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -386,6 +387,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D71B13B91AB06A3E0064C3D2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\npwd\necho cp -f INBPullToRefreshExample/INBPullToRefresh/INBPullToRefreshView.h INBPullToRefresh/INBPullToRefreshView.h\necho cp -f INBPullToRefreshExample/INBPullToRefresh/INBPullToRefreshView.m INBPullToRefresh/INBPullToRefreshView.m\ncp -f INBPullToRefreshExample/INBPullToRefresh/INBPullToRefreshView.h INBPullToRefresh/INBPullToRefreshView.h\ncp -f INBPullToRefreshExample/INBPullToRefresh/INBPullToRefreshView.m INBPullToRefresh/INBPullToRefreshView.m\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D76CC7FF1AAB58A000DB9ED5 /* Sources */ = {

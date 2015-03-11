@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  INBPullToRefreshExample
 //
-//  Created by Leonard on 2015. 3. 8..
-//  Copyright (c) 2015년 Leonard. All rights reserved.
+//  Created by intmain on 2015. 3. 8..
+//  Copyright (c) 2015년 intmain. All rights reserved.
 //
 
 #import "AppDelegate.h"

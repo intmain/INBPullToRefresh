@@ -1,9 +1,9 @@
 //
 //  INBPullToRefreshView.h
-//  IphoneAgit
+//  INBPullToRefreshExample
 //
-//  Created by Leonard on 2015. 2. 28..
-//  Copyright (c) 2015년 Kakao Corp. All rights reserved.
+//  Created by intmain on 2015. 3. 8..
+//  Copyright (c) 2015년 intmain. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
