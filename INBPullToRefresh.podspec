@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "INBPullToRefresh"
-  s.version      = "0.1.2"
+  s.version      = "0.1.1"
   s.summary      = "Image Navigation Bar pull to refresh library."
   s.homepage     = "https://github.com/intmain/INBPullToRefresh"
   s.license      = "MIT"
