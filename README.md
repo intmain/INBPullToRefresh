@@ -1,9 +1,9 @@
 # INBPullToRefresh
-===============
+
 
 Image navigation bar pull to refresh library.
 
-![DemoGif](demo.gif)
+![DemoGif](http://mud-kage.kakaocdn.net/dn/dyXUDe/btqbX7AD6Mw/KDIbP9DUDVJTbherjWqwEk/o.gif)
 
 ## Requirement
 - ARC.
