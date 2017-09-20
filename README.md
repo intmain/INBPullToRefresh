@@ -48,3 +48,5 @@ This library is implemented by "Method swizzling". If you are using "Method swiz
     
 ## LICENSE
 MIT
+
+~cancel~
